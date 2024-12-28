@@ -4,7 +4,7 @@ import configparser
 def get_config(config_section, config_variable):
     
     config = configparser.ConfigParser()
-    config.read('config.ini')
+    config.read('private/config.ini')
 
     config_entry = config[config_section][config_variable]
     # open_weather_api = config['OPEN_WEATHER']['open_weather_api']
