@@ -1,10 +1,11 @@
 import configparser
-
+import os
 
 def get_config(config_section, config_variable):
     
     config = configparser.ConfigParser()
-    config.read('private/config.ini')
+    config_path = os.path.join("private", "config.ini")
+    config.read(config_path)
 
     config_entry = config[config_section][config_variable]
     # open_weather_api = config['OPEN_WEATHER']['open_weather_api']
